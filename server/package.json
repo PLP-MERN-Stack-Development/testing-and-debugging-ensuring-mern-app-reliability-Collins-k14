@@ -7,16 +7,22 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "jest --runInBand",
+    "test:unit": "jest --coverage --runInBand tests/unit",
+    "test:integration": "jest --runInBand tests/integration"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.3"
   },
   "devDependencies": {
@@ -24,5 +30,11 @@
     "mongodb-memory-server": "^10.3.0",
     "nodemon": "^3.1.10",
     "supertest": "^7.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
   }
 }
