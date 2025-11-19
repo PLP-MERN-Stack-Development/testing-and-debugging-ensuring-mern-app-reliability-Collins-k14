@@ -26,6 +26,7 @@
     "mongoose": "^8.19.3"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.8",
     "jest": "^30.2.0",
     "mongodb-memory-server": "^10.3.0",
     "nodemon": "^3.1.10",
